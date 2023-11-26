@@ -39,7 +39,7 @@ val systemBarRecyclerViewScrollListener = object : RecyclerView.OnScrollListener
 		val layoutManager = recyclerView.layoutManager as LinearLayoutManager
 		val scrolled = layoutManager.findFirstCompletelyVisibleItemPosition() != 0
 		val scrollable = scrolled || layoutManager.findLastVisibleItemPosition() <
-				recyclerView.adapter.itemCount - 1
+				recyclerView.adapter?.itemCount!! - 1
 		colorSystemAndToolBars(recyclerView.context, scrolled, scrollable)
 	}
 

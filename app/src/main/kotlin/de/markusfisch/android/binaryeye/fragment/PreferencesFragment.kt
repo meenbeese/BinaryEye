@@ -78,7 +78,7 @@ class PreferencesFragment : PreferenceFragmentCompat() {
 				// From R+ we can query past network suggestions and
 				// make them editable.
 				setOnPreferenceClickListener {
-					fragmentManager.addFragment(NetworkSuggestionsFragment())
+					fragmentManager?.addFragment(NetworkSuggestionsFragment())
 					true
 				}
 			} else if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q) {

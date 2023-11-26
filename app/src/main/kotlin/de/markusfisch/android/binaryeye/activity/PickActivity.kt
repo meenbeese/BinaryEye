@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import de.markusfisch.android.binaryeye.R
 import de.markusfisch.android.binaryeye.app.applyLocale
 import de.markusfisch.android.binaryeye.app.prefs
@@ -105,7 +106,7 @@ class PickActivity : AppCompatActivity() {
 		detectorView.setPaddingFromWindowInsets()
 		detectorView.restoreCropHandlePos()
 
-		findViewById(R.id.scan).setOnClickListener {
+		findViewById<TextView>(R.id.scan).setOnClickListener {
 			showResult()
 		}
 	}
